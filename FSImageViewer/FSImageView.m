@@ -429,7 +429,7 @@
     else if (gesture.state == UIGestureRecognizerStateChanged) {
         self.layer.transform = CATransform3DMakeRotation((beginRadians + gesture.rotation), 0.0f, 0.0f, 1.0f);
     }
-    else {
+    /*else {
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];
         animation.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
         animation.duration = 0.3f;
@@ -438,7 +438,7 @@
         animation.delegate = self;
         [animation setValue:[NSNumber numberWithInt:202] forKey:@"AnimationType"];
         [self.layer addAnimation:animation forKey:@"RotateAnimation"];
-    }
+    }*/
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
